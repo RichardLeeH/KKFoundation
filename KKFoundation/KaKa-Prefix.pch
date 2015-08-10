@@ -1,0 +1,70 @@
+//
+//  KaKa-Prefix.pch
+//  KaKa
+//
+//  Created by 郭 健 on 15/1/21.
+//  Copyright (c) 2015年 YiXin. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define _AFNETWORKING_ALLOW_INVALID_SSL_CERTIFICATES_
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import "Constant.h"
+#import "UIImage+KaKa.h"
+#import "UIImageView+KaKa.h"
+#import "UIView+KaKa.h"
+#import "UIButton+KaKa.h"
+#import "NSTimer+KaKa.h"
+#import "KKNetworkManager.h"
+#import "NSObject+KaKa.h"
+#import "UITextField+KaKa.h"
+#import "Utils.h"
+#import <KVNProgress.h>
+#import "DDLog.h"
+#import "DDTTYLogger.h"
+
+//define this constant if you want to use Masonry without the 'mas_' prefix
+#define MAS_SHORTHAND
+
+//define this constant if you want to enable auto-boxing for default syntax
+#define MAS_SHORTHAND_GLOBALS
+
+#import "Masonry.h"
+
+#import "STDbKit.h"
+#import "GCDObjC.h"
+#import "UIImage+Additions.h"
+#import "MLBlackTransition.h"
+#import "FMDB.h"
+
+#import "RDVTabBarController.h"
+#import "RDVTabBarItem.h"
+#import "User.h"
+#import "NSObject+KaKa.h"
+#import "DBKV.h"
+#import "UIButton+TouchAreaInsets.h"
+#import "NSDictionary+KaKa.h"
+#import "NSString+KaKa.h"
+#import "UILabel+KaKa.h"
+#import "KKNetworkConstant.h"
+
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+#import "KKViewControllerManger.h"
+#import "KKControlBuildFactory.h"
+
+#import "NSDictionary+RequestEncoding.h"
+
+#endif
+
