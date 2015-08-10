@@ -162,10 +162,6 @@
 #pragma mark -
 #pragma mark image url
 
-#define kkImageUrlWithPx(url)       [Utils imageUrlWithPx:url]
-+(NSString*)imageUrlWithPx:(NSString*)url;
-
-
 
 #pragma mark BadgeNumberString
 +(NSString*)getBadgeString:(NSInteger)number;
