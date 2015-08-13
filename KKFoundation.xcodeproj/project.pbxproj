@@ -39,7 +39,7 @@
 		9C5E7C231B7841D300815B8A /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E7C011B7841D300815B8A /* ProgressHUD.m */; };
 		9C5E7C241B7841D300815B8A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E7C031B7841D300815B8A /* Utils.m */; };
 		9C5E7C251B7841D300815B8A /* KKViewControllerManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E7C061B7841D300815B8A /* KKViewControllerManger.m */; };
-		9C5E7C281B784F7600815B8A /* MLBlackTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E7C271B784F7600815B8A /* MLBlackTransition.m */; };
+		9CABBD181B7C7802003B31AF /* MLBlackTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CABBD171B7C7802003B31AF /* MLBlackTransition.m */; };
 		9CB07E741B733E550029E0F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB07E731B733E550029E0F7 /* main.m */; };
 		9CB07E7D1B733E550029E0F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB07E7B1B733E550029E0F7 /* Main.storyboard */; };
 		9CB07E7F1B733E550029E0F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CB07E7E1B733E550029E0F7 /* Images.xcassets */; };
@@ -115,10 +115,10 @@
 		9C5E7C031B7841D300815B8A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		9C5E7C051B7841D300815B8A /* KKViewControllerManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKViewControllerManger.h; sourceTree = "<group>"; };
 		9C5E7C061B7841D300815B8A /* KKViewControllerManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKViewControllerManger.m; sourceTree = "<group>"; };
-		9C5E7C261B784F7600815B8A /* MLBlackTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBlackTransition.h; sourceTree = "<group>"; };
-		9C5E7C271B784F7600815B8A /* MLBlackTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBlackTransition.m; sourceTree = "<group>"; };
-		9CABBD121B7C31A6003B31AF /* KKConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKConstants.h; sourceTree = "<group>"; };
-		9CABBD131B7C320E003B31AF /* KKFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFoundation.h; sourceTree = "<group>"; };
+		9CABBD141B7C7802003B31AF /* KKConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKConstants.h; sourceTree = "<group>"; };
+		9CABBD151B7C7802003B31AF /* KKFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKFoundation.h; sourceTree = "<group>"; };
+		9CABBD161B7C7802003B31AF /* MLBlackTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBlackTransition.h; sourceTree = "<group>"; };
+		9CABBD171B7C7802003B31AF /* MLBlackTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBlackTransition.m; sourceTree = "<group>"; };
 		9CB07E6E1B733E550029E0F7 /* KKFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB07E721B733E550029E0F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CB07E731B733E550029E0F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -159,8 +159,6 @@
 		9C5E7BBF1B7841D300815B8A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				9C5E7C261B784F7600815B8A /* MLBlackTransition.h */,
-				9C5E7C271B784F7600815B8A /* MLBlackTransition.m */,
 				9C5E7BC01B7841D300815B8A /* Base */,
 				9C5E7BC51B7841D300815B8A /* Category */,
 				9C5E7BE71B7841D300815B8A /* Networks */,
@@ -168,8 +166,6 @@
 				9C5E7BF31B7841D300815B8A /* NoNet */,
 				9C5E7BF81B7841D300815B8A /* Utils */,
 				9C5E7C041B7841D300815B8A /* ViewControllerManager */,
-				9CABBD121B7C31A6003B31AF /* KKConstants.h */,
-				9CABBD131B7C320E003B31AF /* KKFoundation.h */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -263,6 +259,10 @@
 		9C5E7BF81B7841D300815B8A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9CABBD141B7C7802003B31AF /* KKConstants.h */,
+				9CABBD151B7C7802003B31AF /* KKFoundation.h */,
+				9CABBD161B7C7802003B31AF /* MLBlackTransition.h */,
+				9CABBD171B7C7802003B31AF /* MLBlackTransition.m */,
 				9C5E7BF91B7841D300815B8A /* KKControlBuildFactory.h */,
 				9C5E7BFA1B7841D300815B8A /* KKControlBuildFactory.m */,
 				9C5E7BFC1B7841D300815B8A /* LocationManager.h */,
@@ -504,7 +504,7 @@
 				9C5E7C1C1B7841D300815B8A /* KKNoDataBaseView.m in Sources */,
 				9C5E7C241B7841D300815B8A /* Utils.m in Sources */,
 				9CB07EDA1B733FE00029E0F7 /* ViewController.m in Sources */,
-				9C5E7C281B784F7600815B8A /* MLBlackTransition.m in Sources */,
+				9CABBD181B7C7802003B31AF /* MLBlackTransition.m in Sources */,
 				9C5E7C1B1B7841D300815B8A /* KKNetworkReachabilityManager.m in Sources */,
 				9C5E7C121B7841D300815B8A /* UIImage+KaKa.m in Sources */,
 				9C5E7C1A1B7841D300815B8A /* KKNetworkOperation.m in Sources */,
