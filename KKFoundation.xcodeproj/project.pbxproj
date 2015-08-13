@@ -46,7 +46,6 @@
 		9CB07E821B733E550029E0F7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB07E801B733E550029E0F7 /* LaunchScreen.xib */; };
 		9CB07EC71B733FE00029E0F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB07E9A1B733FE00029E0F7 /* AppDelegate.m */; };
 		9CB07EDA1B733FE00029E0F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB07EC51B733FE00029E0F7 /* ViewController.m */; };
-		A0A1A8BFDB9530D4B44B2A63 /* libPods-KKFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA075039CABA3E9A4C55059 /* libPods-KKFoundation.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,7 +106,6 @@
 		9C5E7BF71B7841D300815B8A /* KKNoNetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKNoNetView.m; sourceTree = "<group>"; };
 		9C5E7BF91B7841D300815B8A /* KKControlBuildFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKControlBuildFactory.h; sourceTree = "<group>"; };
 		9C5E7BFA1B7841D300815B8A /* KKControlBuildFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKControlBuildFactory.m; sourceTree = "<group>"; };
-		9C5E7BFB1B7841D300815B8A /* KKUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKUtils.h; sourceTree = "<group>"; };
 		9C5E7BFC1B7841D300815B8A /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		9C5E7BFD1B7841D300815B8A /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		9C5E7BFF1B7841D300815B8A /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0A1A8BFDB9530D4B44B2A63 /* libPods-KKFoundation.a in Frameworks */,
 				6279E682A0F28B20159A811A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +265,6 @@
 			children = (
 				9C5E7BF91B7841D300815B8A /* KKControlBuildFactory.h */,
 				9C5E7BFA1B7841D300815B8A /* KKControlBuildFactory.m */,
-				9C5E7BFB1B7841D300815B8A /* KKUtils.h */,
 				9C5E7BFC1B7841D300815B8A /* LocationManager.h */,
 				9C5E7BFD1B7841D300815B8A /* LocationManager.m */,
 				9C5E7BFE1B7841D300815B8A /* ProgressHUD */,
