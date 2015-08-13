@@ -119,6 +119,8 @@
 		9C5E7C061B7841D300815B8A /* KKViewControllerManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKViewControllerManger.m; sourceTree = "<group>"; };
 		9C5E7C261B784F7600815B8A /* MLBlackTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBlackTransition.h; sourceTree = "<group>"; };
 		9C5E7C271B784F7600815B8A /* MLBlackTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBlackTransition.m; sourceTree = "<group>"; };
+		9CABBD121B7C31A6003B31AF /* KKConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKConstants.h; sourceTree = "<group>"; };
+		9CABBD131B7C320E003B31AF /* KKFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFoundation.h; sourceTree = "<group>"; };
 		9CB07E6E1B733E550029E0F7 /* KKFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB07E721B733E550029E0F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CB07E731B733E550029E0F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -169,6 +171,8 @@
 				9C5E7BF31B7841D300815B8A /* NoNet */,
 				9C5E7BF81B7841D300815B8A /* Utils */,
 				9C5E7C041B7841D300815B8A /* ViewControllerManager */,
+				9CABBD121B7C31A6003B31AF /* KKConstants.h */,
+				9CABBD131B7C320E003B31AF /* KKFoundation.h */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
