@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "KKFoundation"
-  s.version      = "0.0.4"
+  s.version      = “0.0.2”
   s.summary      = "A short description of KKFoundation."
 
   s.description  = <<-DESC
