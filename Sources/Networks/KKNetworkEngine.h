@@ -22,6 +22,8 @@ typedef void (^KKResponseErrorBlock)(id aCompletedOperation, NSError* aError);
 
 +(id)sharedInstance;
 
+- (id)initWithBaseUrl:(NSString *)aUrl;
+
 /**
  *  发送网络请求
  *
