@@ -74,3 +74,12 @@
 
 #define IOS_VERSION_CODE [[[UIDevice currentDevice] systemVersion] intValue]
 
+#ifdef DEBUG
+#define KKLog(...) NSLog(__VA_ARGS__)
+#define debugMethod() KKLog(@"%s", __func__)
+#else
+#define KKLog(...)
+#define debugMethod()
+#endif
+
+

@@ -65,6 +65,10 @@
 
     KKNetworkOperation *operation = nil;
     
+    KKLog(@"---------------------\n\
+          %@?%@\n\
+          -----------------------", aPath, aBody);
+
     AFHTTPRequestOperationManager *mrg = [[AFHTTPRequestOperationManager manager] initWithBaseURL:[NSURL URLWithString:aPath]];
     
     mrg.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
@@ -175,6 +179,11 @@
 {
     AFHTTPRequestOperationManager *mrg = [[AFHTTPRequestOperationManager manager] initWithBaseURL:[NSURL URLWithString:aPath]];
     
+    KKLog(@"---------------------\n\
+          %@?%@\n\
+          -----------------------", aPath, aBody);
+
+
     mrg.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
     
     mrg.securityPolicy = _securityPolicy;
@@ -228,6 +237,10 @@
     AFHTTPRequestOperationManager *mrg = [[AFHTTPRequestOperationManager manager] initWithBaseURL:[NSURL URLWithString:aPath]];
     
     mrg.securityPolicy = _securityPolicy;
+
+    KKLog(@"---------------------\n\
+          %@?%@\n\
+          -----------------------", aPath, aBody);
 
     mrg.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
     
