@@ -10,27 +10,24 @@
 #import "KKNetworkOperation.h"
 #import "Utils.h"
 #import "NSDictionary+RequestEncoding.h"
-#define kVersion            @"V2.0"
 #import "GCDObjC.h"
 
 @interface KKNetworkEngine()
 {
     AFSecurityPolicy *_securityPolicy;
-    NSURL            *_baseUrl;
 }
 
 @end
 
 @implementation KKNetworkEngine
 
-- (id)initWithBaseUrl:(NSString *)aUrl
+- (id)init
 {
     self = [super init];
     if (nil != self)
     {
         _securityPolicy = [[AFSecurityPolicy alloc] init];
         [_securityPolicy setAllowInvalidCertificates:YES];
-         _baseUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", aUrl, kVersion]];
     }
     
     return self;
@@ -46,12 +43,6 @@
         
         return ret;
     }));
-}
-
-+(NSDictionary*)getSysData
-{
-    NSMutableDictionary *ret = [NSMutableDictionary dictionary];
-    return ret;
 }
 
 /**
@@ -74,13 +65,7 @@
 
     KKNetworkOperation *operation = nil;
     
-    NSDictionary *params = @{@"sysData":[[KKNetworkEngine getSysData] jsonEncodedKeyValueString],
-                             @"data":[aBody jsonEncodedKeyValueString]};
-    NSLog(@"---------------------\n\
-          %@/%@?%@\n\
-          -----------------------", _baseUrl, aPath, params);
-
-    AFHTTPRequestOperationManager *mrg = [[AFHTTPRequestOperationManager manager] initWithBaseURL:_baseUrl];
+    AFHTTPRequestOperationManager *mrg = [[AFHTTPRequestOperationManager manager] initWithBaseURL:[NSURL URLWithString:aPath]];
     
     mrg.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
     
@@ -88,7 +73,7 @@
 
     if ([[aMethod uppercaseString] isEqualToString:@"GET"])
     {
-        operation = (KKNetworkOperation* )[mrg GET:aPath parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+        operation = (KKNetworkOperation* )[mrg GET:aPath parameters:aBody success:^(AFHTTPRequestOperation *operation, id responseObject)
         {
             if (aSuccess)
             {
@@ -104,7 +89,7 @@
     }
     else if ([[aMethod uppercaseString] isEqualToString:@"POST"])
     {
-        operation = (KKNetworkOperation *)[mrg POST:aPath parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+        operation = (KKNetworkOperation *)[mrg POST:aPath parameters:aBody success:^(AFHTTPRequestOperation *operation, id responseObject)
          {
              if (aSuccess)
              {
@@ -188,12 +173,7 @@
                                       handler:(KKResponseBlock)aSuccess
                                  errorHandler:(KKResponseErrorBlock)aError
 {
-    NSDictionary *params = @{@"sysData":[[KKNetworkEngine getSysData] jsonEncodedKeyValueString],
-                             @"data":[aBody jsonEncodedKeyValueString]};
-    NSLog(@"---------------------\n\
-          %@/%@?%@\n\
-          -----------------------", _baseUrl, aPath, params);
-    AFHTTPRequestOperationManager *mrg = [[AFHTTPRequestOperationManager manager] initWithBaseURL:_baseUrl];
+    AFHTTPRequestOperationManager *mrg = [[AFHTTPRequestOperationManager manager] initWithBaseURL:[NSURL URLWithString:aPath]];
     
     mrg.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
     
@@ -201,7 +181,7 @@
 
     [mrg.requestSerializer setValue:@"multipart/form-data" forHTTPHeaderField:@"Content-Type"];
     
-    KKNetworkOperation *ret = (KKNetworkOperation *)[mrg POST:aPath parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData)
+    KKNetworkOperation *ret = (KKNetworkOperation *)[mrg POST:aPath parameters:aBody constructingBodyWithBlock:^(id<AFMultipartFormData> formData)
      {//表单拼接数据
          //拼接头像文件信息
      }
@@ -245,12 +225,7 @@
                                       errorHandler:(KKResponseErrorBlock)aError
 {
     
-    NSDictionary *params = @{@"sysData":[[KKNetworkEngine getSysData] jsonEncodedKeyValueString],
-                             @"data":[aBody jsonEncodedKeyValueString]};
-    NSLog(@"---------------------\n\
-          %@/%@?%@\n\
-          -----------------------", _baseUrl, aPath, params);
-    AFHTTPRequestOperationManager *mrg = [[AFHTTPRequestOperationManager manager] initWithBaseURL:_baseUrl];
+    AFHTTPRequestOperationManager *mrg = [[AFHTTPRequestOperationManager manager] initWithBaseURL:[NSURL URLWithString:aPath]];
     
     mrg.securityPolicy = _securityPolicy;
 
@@ -258,7 +233,7 @@
     
     [mrg.requestSerializer setValue:@"multipart/form-data" forHTTPHeaderField:@"Content-Type"];
     
-    KKNetworkOperation *ret = (KKNetworkOperation *)[mrg POST:aPath parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData)
+    KKNetworkOperation *ret = (KKNetworkOperation *)[mrg POST:aPath parameters:aBody constructingBodyWithBlock:^(id<AFMultipartFormData> formData)
     {//表单拼接数据
         if (!isBlankObject(aFilePath))
         {

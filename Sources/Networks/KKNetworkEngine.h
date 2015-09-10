@@ -22,8 +22,6 @@ typedef void (^KKResponseErrorBlock)(id aCompletedOperation, NSError* aError);
 
 +(id)sharedInstance;
 
-- (id)initWithBaseUrl:(NSString *)aUrl;
-
 /**
  *  发送网络请求
  *
@@ -108,11 +106,6 @@ typedef void (^KKResponseErrorBlock)(id aCompletedOperation, NSError* aError);
                                             params:(NSDictionary *)aBody
                                            handler:(KKResponseBlock)aSuccess
                                       errorHandler:(KKResponseErrorBlock)aError;
-
-///  @brief  <#Description#>
-///
-///  @return <#return value description#>
-+(NSDictionary*)getSysData;
 
 
 @end
