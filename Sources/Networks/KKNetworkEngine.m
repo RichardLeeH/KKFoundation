@@ -179,6 +179,8 @@
 {
     AFHTTPRequestOperationManager *mrg = [[AFHTTPRequestOperationManager manager] initWithBaseURL:[NSURL URLWithString:aPath]];
     
+    mrg.requestSerializer = [AFHTTPRequestSerializer serializer];
+    
     KKLog(@"---------------------\n\
           %@?%@\n\
           -----------------------", aPath, aBody);
@@ -237,6 +239,8 @@
     AFHTTPRequestOperationManager *mrg = [[AFHTTPRequestOperationManager manager] initWithBaseURL:[NSURL URLWithString:aPath]];
     
     mrg.securityPolicy = _securityPolicy;
+
+    mrg.requestSerializer = [AFHTTPRequestSerializer serializer];
 
     KKLog(@"---------------------\n\
           %@?%@\n\
